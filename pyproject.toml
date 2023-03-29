@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uvdebugger"
+version = "0.1"
+authors = [
+    {name = "Christian Klinger", email = "ck@novareto.de"},
+]
+requires-python = ">=3.10"
+dependencies = [
+    "transaction",
+    "click",
+]
+
+[project.scripts]
+debugger = "uvdebugger:debugger"
+
+[tool.setuptools.packages.find]
+where = ["."]
